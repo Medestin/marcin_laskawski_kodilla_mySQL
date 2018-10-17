@@ -1,0 +1,18 @@
+-- Dodanie nowego postu do tabeli POSTS. --
+
+INSERT INTO POSTS(USER_ID, BODY)
+VALUES (1, "This will be here forever");
+COMMIT;
+
+-- Modyfikacje w dodanym rekordzie wartość pola BODY i ustawienia jej na "To delete". --
+
+UPDATE POSTS
+SET BODY = ("Don't believe random people on the Internet.")
+WHERE ID = 7;
+COMMIT;
+
+-- Usunięcie dodany przed chwilą rekord. --
+
+DELETE FROM POSTS
+WHERE ID = 7;
+COMMIT;
